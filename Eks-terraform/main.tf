@@ -28,7 +28,7 @@ data "aws_vpc" "default" {
 #get public subnets for cluster
 data "aws_subnets" "public" {
   filter {
-    name   = "vpc-0617d21c956465ba1"
+    name   = "vpc-id"
     values = [data.aws_vpc.default.id]
   }
 }
